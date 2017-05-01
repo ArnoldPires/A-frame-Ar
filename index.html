@@ -5,16 +5,14 @@
     <title>aframe-ar</title>
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-  </head>
-  <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded artoolkit= 'sourceType: webcam;'>
-      <a-assets>
-        <a-asset-item id="crate-obj" src="https://cdn.rawgit.com/flowerio/hello-vr/master/couch.obj"></a-asset-item>
-        <a-asset-item id="crate-mtl" src="https://cdn.rawgit.com/flowerio/hello-vr/master/couch.mtl"></a-asset-item>
-        <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
-        <a-marker-camera preset='hiro'></a-marker-camera>
-      </a-assets>
-      <a-entity id="target" obj-model="obj: #crate-obj; mtl: #crate-mtl" position="0 -1.417 3.670" rotation="0 180 0" scale="0.2 0.2 0.2"></a-entity>
-    </a-scene>
+    <script src="https://rawgit.com/flysonic10/aframe-passthrough/master/dist/aframe-passthrough-component.min.js"></script>
+    <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/master/dist/aframe-orbit-controls-component.min.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded artoolkit='sourceType: webcam;'>
+		<a-entity geometry="primitive: plane; height: 4; width: 3.20" position="0 0 0" rotation="-60 90 0"  material="shader: flat; transparent: true;
+  src: url(https://ucarecdn.com/38280207-b5cb-49ec-8865-e3235602d4f8/)"></a-entity>
+		<a-marker-camera preset='hiro'></a-marker-camera>
+	</a-scene>
+
   </body>
 </html>
